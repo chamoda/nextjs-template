@@ -21,7 +21,39 @@ First, run the development server:
 npm run dev
 ```
 
-## Deployment
+## Code Quality
+
+This project enforces code quality standards automatically using Git hooks and lint-staged:
+
+### Pre-commit Hooks
+
+The project uses [Husky](https://typicode.github.io/husky/) and [lint-staged](https://github.com/lint-staged/lint-staged) to run quality checks on staged files before each commit:
+
+- **Prettier**: Automatically formats all staged files
+- **ESLint**: Lints and fixes JavaScript/TypeScript files
+- **Next.js lint**: Runs Next.js-specific linting rules
+
+Configuration is defined in `.lintstagedrc.mjs` using ES module syntax.
+
+### Manual Commands
+
+You can also run these commands manually:
+
+```bash
+# Lint and fix issues
+npm run lint:fix
+
+# Format all files
+npm run format
+
+# Check formatting without changes
+npm run format:check
+
+# Type check
+npm run type-check
+```
+
+## Production
 
 ### Cloudflare Static Hosting
 
