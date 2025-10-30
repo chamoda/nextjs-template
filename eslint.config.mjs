@@ -23,11 +23,7 @@ const eslintConfig = [
       "next-env.d.ts",
     ],
   },
-  ...compat.extends(
-    "next/core-web-vitals",
-    "next/typescript",
-    "prettier"
-  ),
+  ...compat.extends("next/core-web-vitals", "next/typescript", "prettier"),
   ...compat.plugins("unused-imports", "prettier"),
   {
     rules: {
@@ -50,8 +46,8 @@ const eslintConfig = [
       "prefer-const": "error",
       "no-var": "error",
       "no-console": "warn",
-      "eqeqeq": ["error", "always"],
-      "curly": ["error", "all"],
+      eqeqeq: ["error", "always"],
+      curly: ["error", "all"],
     },
   },
 ];
