@@ -53,6 +53,19 @@ npm run format:check
 npm run type-check
 ```
 
+### TypeScript Strict Mode
+
+This project uses **maximum strictness** TypeScript configuration for enhanced type safety:
+
+**Enabled Options:**
+
+- `strict: true` - All strict type-checking options (null checks, no implicit any, etc.)
+- `noUncheckedIndexedAccess: true` - Array/object access returns `T | undefined` to prevent index errors
+
+**Benefits:** Catches bugs at compile time, eliminates null/undefined errors, better refactoring confidence
+
+**Trade-off:** Requires more explicit type annotations and null checks, but results in more robust code
+
 ## Production
 
 ### Cloudflare Static Hosting
