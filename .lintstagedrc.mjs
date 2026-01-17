@@ -1,11 +1,11 @@
 import path from "path";
 
 const buildEslintCommand = (filenames) =>
-  `next lint --fix --file ${filenames
+  `eslint --fix ${filenames
     .map((f) => path.relative(process.cwd(), f))
-    .join(" --file ")}`;
+    .join(" ")}`;
 
-export default {
+const config = {
   // Run prettier first, then ESLint (which includes both general linting and Next.js rules)
   "*.{js,jsx,ts,tsx}": ["prettier --write", buildEslintCommand],
 
@@ -15,3 +15,5 @@ export default {
   // Format CSS files
   "*.{css,scss,sass}": ["prettier --write"],
 };
+
+export default config;
