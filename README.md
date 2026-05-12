@@ -17,6 +17,8 @@ The project is configured with SSG-first rendering, meaning pages are generated 
 
 ## Getting Started
 
+**Requires Node.js 24+** (current Active LTS). Use `nvm use` to pick up the version from `.nvmrc`.
+
 First, run the development server:
 
 ```bash
